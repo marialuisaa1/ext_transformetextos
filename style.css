@@ -7,9 +7,8 @@
   font-size: 0.85rem;
 
   /* Bordas View */
- /*  border: solid 1px #fe02d0  ; */
+  /*  border: solid 1px #fe02d0  ; */
 }
-
 
 .container-pai {
   width: 200px;
@@ -36,8 +35,6 @@
   cursor: pointer;
   width: 77px;
   padding: 1px;
-  
-  
 }
 
 /* Desafio para Turma B */
@@ -53,10 +50,4 @@
   resize: none;
   width: 160px;
   height: 70px;
-  
-}
-
-/* Rodapé */
-.rodape{
-    
 }
