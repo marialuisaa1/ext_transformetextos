@@ -36,6 +36,13 @@
   justify-content: space-between;
   width: 100%;
 }
+.container-button .button-group:last-child {
+  justify-content: center;
+}
+.container-button .button-group:last-child .btn {
+  width: 160px; 
+}
+
 .btn {
   cursor: pointer;
   width: 77px;
