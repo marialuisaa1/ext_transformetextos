@@ -16,4 +16,12 @@ window.document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("#result-textarea").innerHTML =
         inputText.toLowerCase();
     });
+  // Botão Primeira letra Maiúscula
+  window.document
+    .querySelector("#btnPrimeira")
+    .addEventListener("click", function () {
+      let inputText = document.querySelector("#input-text").value.toLowerCase();
+      document.querySelector("#result-textarea").innerHTML =
+        inputText.charAt(0).toUpperCase() + inputText.slice(1);
+    });
 });

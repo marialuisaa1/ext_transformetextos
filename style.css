@@ -25,11 +25,16 @@
   width: 160px;
   margin-top: 5px;
   margin-bottom: 5px;
-  /*  gap: 2px; */
-
+  gap: 5px;
   /* FlexBox */
+  flex-wrap: wrap;
+  display: flex;
+  
+}
+.button-group{
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .btn {
   cursor: pointer;
