@@ -21,8 +21,22 @@ window.document.addEventListener("DOMContentLoaded", function () {
     .querySelector("#btnPrimeira")
     .addEventListener("click", function () {
       let inputText = document.querySelector("#input-text").value.toLowerCase();
-      document.querySelector("#result-textarea").innerHTML =
-        inputText.charAt(0).toUpperCase() + inputText.slice(1);
+      let resultText = "";
+      let colocarMaiuscula = true;
+
+      for (let i = 0; i < inputText.length; i++) {
+        let char = inputText[i];
+        if (colocarMaiuscula && char.match(/[a-zà-ú]/i)) {
+          resultText += char.toUpperCase();
+          colocarMaiuscula = false;
+        } else {
+          resultText += char;
+        }
+        if (char === "." || char === "!" || char === "?") {
+          colocarMaiuscula = true;
+        }
+      }
+      document.querySelector("#result-textarea").innerHTML = resultText;
     });
   // Botão Limpar
   window.document
@@ -37,6 +51,7 @@ window.document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", function () {
       let inputText = document.querySelector("#input-text").value;
       let palavras = inputText.split(" ");
-      document.querySelector("#result-textarea").innerHTML = palavras.join("\n");
+      document.querySelector("#result-textarea").innerHTML =
+        palavras.join("\n");
     });
 });
